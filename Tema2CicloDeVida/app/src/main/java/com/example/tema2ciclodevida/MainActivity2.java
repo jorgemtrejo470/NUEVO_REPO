@@ -26,5 +26,5 @@ public class MainActivity2 extends AppCompatActivity {
     ejemplo.setData(Uri.parse("https:www.google.es"));
     startActivity(ejemplo);
     }
-    
+
 }

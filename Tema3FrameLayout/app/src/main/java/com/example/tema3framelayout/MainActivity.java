@@ -1,4 +1,4 @@
-package com.example.tema3loslayouts;
+package com.example.tema3framelayout;
 
 import android.os.Bundle;
 
@@ -14,12 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        //setContentView(R.layout.activity_main);
-        //setContentView(R.layout.relativelayout);
-        //setContentView(R.layout.framelayout);
-        setContentView(R.layout.tablelayout);
-
+        setContentView(R.layout.activity_main);
 
     }
-
 }

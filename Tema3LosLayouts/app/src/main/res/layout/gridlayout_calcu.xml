@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:rowCount="6"
+    android:useDefaultMargins="true">
+
+    <!-- Pantalla de la calculadora -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_columnSpan="4"
+        android:gravity="center_vertical|right"
+        android:padding="10dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:background="#BDBDBD"
+        android:textColor="#000000" />
+
+    <!-- Espacio entre la pantalla y los botones -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_columnSpan="4" />
+
+    <!-- Primera fila -->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="1"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="2"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="3"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="/"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <!-- Segunda fila -->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="4"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="5"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="6"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="*"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <!-- Tercera fila -->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="7"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="8"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="9"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="-"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <!-- Cuarta fila -->
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="0"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="."
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="="
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_columnWeight="1"
+        android:text="+"
+        android:textSize="25sp"
+        android:backgroundTint="#6A4FB3" />
+
+</GridLayout>

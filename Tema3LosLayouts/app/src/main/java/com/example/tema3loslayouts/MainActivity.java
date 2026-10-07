@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.relativelayout);
         //setContentView(R.layout.framelayout);
         setContentView(R.layout.tablelayout);
-
-
     }
 
 }

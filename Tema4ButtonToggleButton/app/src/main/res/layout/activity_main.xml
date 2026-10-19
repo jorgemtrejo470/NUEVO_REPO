@@ -5,25 +5,19 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/texto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mi texto" />
-    <TextView
-        android:id="@+id/texto2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mi texto" />
+    <ImageButton
+        android:id="@+id/botonImagen"
+        android:layout_width="348dp"
+        android:layout_height="506dp"
+        android:src="@drawable/imagen2"
+        android:contentDescription="Imagen del perro" />
 
     <ToggleButton
+        android:id="@+id/boton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tgboton"
-        android:text="ToggleButton"
-        android:textOff="No pulsado"
-        android:textOn="Pulsado"
-        android:checked="false"
-        />
+        android:textOn="Ocultar imagen"
+        android:textOff="Mostrar imagen"
+        android:checked="true" />
 
 </LinearLayout>

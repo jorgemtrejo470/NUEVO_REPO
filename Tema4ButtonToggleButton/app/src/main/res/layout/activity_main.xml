@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/botonImagen"
-        android:layout_width="348dp"
-        android:layout_height="506dp"
-        android:src="@drawable/imagen2"
-        android:contentDescription="Imagen del perro" />
-
-    <ToggleButton
-        android:id="@+id/boton1"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/numero"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textOn="Ocultar imagen"
-        android:textOff="Mostrar imagen"
-        android:checked="true" />
+        android:hint="Ingrese su numero de telefono"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

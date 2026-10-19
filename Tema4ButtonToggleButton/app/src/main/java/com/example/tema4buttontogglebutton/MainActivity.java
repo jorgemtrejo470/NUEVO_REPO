@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
         miTexto.setTypeface(Typeface.SANS_SERIF);
 
         // Aplicar animación de rotación
-        miAnimation = AnimationUtils.loadAnimation(
-                this, R.anim.translate);
+        miAnimation = AnimationUtils.loadAnimation(this, R.anim.translate);
 
         miAnimation.setRepeatMode(Animation.RESTART);
         miAnimation.setRepeatCount(20);
@@ -69,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
         miTexto2.setTypeface(Typeface.SANS_SERIF);
 
         // Aplicar animación de rotación
-        miAnimation2 = AnimationUtils.loadAnimation(
-                this, R.anim.rotate);
+        miAnimation2 = AnimationUtils.loadAnimation(this, R.anim.rotate);
 
         miAnimation2.setRepeatMode(Animation.RESTART);
         miAnimation2.setRepeatCount(80);

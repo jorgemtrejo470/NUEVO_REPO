@@ -47,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
         miAnimation.setRepeatCount(20);
 
         miTexto.startAnimation(miAnimation);
+
     }
 }

@@ -6,11 +6,11 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/text"
+        android:id="@+id/text_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su nombre"
-        android:inputType="text"
+        android:hint="Ingrese correo electronico"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

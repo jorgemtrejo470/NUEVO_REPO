@@ -1,8 +1,11 @@
 package com.example.tema4buttontogglebutton;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,15 +17,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        //Estos son los elementos que se sugerirán
-        String [] opciones= {"Opción1","Opción2","Opción3","Opción4","Opción5"};
-        //Aqui se asigna el elemento AutocompleteTextView creado en el XML al Java
-        AutoCompleteTextView textoLeido = findViewById(R.id.miTexto);
-        //Creamos un Array adapter al que le pasamos el array de strings
-        //la mision de este "ArrayAdapter" es Adaptar los datos del array al AutocomplteTextView
-        ArrayAdapter<String> adaptador= new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,opciones);
-        //Por último se le pasa al adaptador la instancia del texto definida en el xml
-        textoLeido.setAdapter(adaptador);
     }
+
+   protected void onStart(){
+        super.onStart();
+       setContentView(R.layout.activity_main);
+       Spinner miSpinner = (Spinner) findViewById(R.id.miSpinner);
+       String[] valores = {"Star Wars", "Reservoir dogs", "El club de la lucha", "Snach: Cerdos y Diamantes"};
+
+       miSpinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valores));
+
+       miSpinner.setOnItemSelectedListener(new AdapterView.OnItemClickListener(){
+           @Override
+           public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+               System.out.println("Has seleccionado el valor"+adapterView.getItemAtPosition(position));
+           }
+
+           @Override
+           public void onNothingSelected(AdapterView<?> adapterView){
+               System.out.println("No has selecionado nada");
+           }
+       }
+   }
 }

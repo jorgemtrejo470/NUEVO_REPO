@@ -1,9 +1,11 @@
 package com.example.tema4buttontogglebutton;
 
 import android.os.Bundle;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,36 +19,45 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Buscamos el CheckBox definido en el XML
-        CheckBox checkbox1 = findViewById(R.id.checkbox1);
+        // Buscamos los elementos del XML
+        RadioGroup radioGroup = findViewById(R.id.radiogroup);
+        Button buttonCheck = findViewById(R.id.buttonCheck);
+        TextView textViewResult = findViewById(R.id.textViewResult);
 
-        // Listener para detectar cambios en el CheckBox
-        checkbox1.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
+        // Listener para comprobar la selección
+        buttonCheck.setOnClickListener(new View.OnClickListener() {
 
-                    @Override
-                    public void onCheckedChanged(
-                            CompoundButton buttonView,
-                            boolean isChecked) {
+            @Override
+            public void onClick(View view) {
 
-                        if (isChecked) {
-                            // Código cuando está seleccionado
-                            Toast.makeText(
-                                    MainActivity.this,
-                                    "Has marcado la opción",
-                                    Toast.LENGTH_SHORT
-                            ).show();
+                // Obtenemos el ID del RadioButton seleccionado
+                int selectedId = radioGroup.getCheckedRadioButtonId();
 
-                        } else {
-                            // Código cuando no está seleccionado
-                            Toast.makeText(
-                                    MainActivity.this,
-                                    "Has desmarcado la opción",
-                                    Toast.LENGTH_SHORT
-                            ).show();
-                        }
-                    }
+                // Comprobamos si hay alguna opción seleccionada
+                if (selectedId != -1) {
+
+                    // Buscamos el RadioButton seleccionado
+                    RadioButton selectedRadioButton =
+                            findViewById(selectedId);
+
+                    // Obtenemos el texto de la opción
+                    String selectedOption =
+                            selectedRadioButton.getText().toString();
+
+                    // Mostramos la opción elegida
+                    textViewResult.setText(
+                            "Seleccionado: " + selectedOption
+                    );
+
+                } else {
+
+                    // No se ha seleccionado ninguna opción
+                    textViewResult.setText(
+                            "No has seleccionado ninguna opción"
+                    );
                 }
-        );
+            }
+        });
     }
 }
+

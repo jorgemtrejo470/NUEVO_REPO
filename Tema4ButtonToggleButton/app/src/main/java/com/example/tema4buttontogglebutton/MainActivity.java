@@ -1,7 +1,7 @@
 package com.example.tema4buttontogglebutton;
 
 import android.os.Bundle;
-import android.widget.SeekBar;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,40 +17,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Buscamos los elementos del XML
-        SeekBar seekBar = findViewById(R.id.seekBar);
-        TextView textViewProgress = findViewById(R.id.textViewProgress);
+        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        TextView textViewRating = findViewById(R.id.textViewRating);
 
-        // Listener para detectar cambios en el SeekBar
-        seekBar.setOnSeekBarChangeListener(
-                new SeekBar.OnSeekBarChangeListener() {
+        // Listener para cambios en la calificación del RatingBar
+        ratingBar.setOnRatingBarChangeListener(
+                new RatingBar.OnRatingBarChangeListener() {
 
-                    // Se ejecuta cuando cambia el progreso
                     @Override
-                    public void onProgressChanged(
-                            SeekBar seekBar,
-                            int progress,
+                    public void onRatingChanged(
+                            RatingBar ratingBar,
+                            float rating,
                             boolean fromUser) {
 
-                        textViewProgress.setText(
-                                "Volumen: " + progress
+                        // Actualizar el TextView con la calificación seleccionada
+                        textViewRating.setText(
+                                "Calificación: " + rating
                         );
-                    }
-
-                    // Se ejecuta cuando el usuario empieza a mover la barra
-                    @Override
-                    public void onStartTrackingTouch(SeekBar seekBar) {
-
-                        // Aquí podemos añadir código si lo necesitamos
-                    }
-
-                    // Se ejecuta cuando el usuario termina de mover la barra
-                    @Override
-                    public void onStopTrackingTouch(SeekBar seekBar) {
-
-                        // Aquí podemos añadir código si lo necesitamos
                     }
                 }
         );
     }
 }
+
 

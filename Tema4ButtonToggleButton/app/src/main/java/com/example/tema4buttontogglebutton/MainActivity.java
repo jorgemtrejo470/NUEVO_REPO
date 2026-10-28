@@ -1,8 +1,7 @@
 package com.example.tema4buttontogglebutton;
 
 import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.widget.Switch;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -18,28 +17,40 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Buscamos los elementos del XML
-        Switch switch1 = findViewById(R.id.switch1);
-        TextView textViewStatus = findViewById(R.id.textViewStatus);
+        SeekBar seekBar = findViewById(R.id.seekBar);
+        TextView textViewProgress = findViewById(R.id.textViewProgress);
 
-        // Listener para detectar el cambio de estado del Switch
-        switch1.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
+        // Listener para detectar cambios en el SeekBar
+        seekBar.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener() {
 
+                    // Se ejecuta cuando cambia el progreso
                     @Override
-                    public void onCheckedChanged(
-                            CompoundButton buttonView,
-                            boolean isChecked) {
+                    public void onProgressChanged(
+                            SeekBar seekBar,
+                            int progress,
+                            boolean fromUser) {
 
-                        if (isChecked) {
-                            // El Switch está encendido
-                            textViewStatus.setText("Estado: Encendido");
+                        textViewProgress.setText(
+                                "Volumen: " + progress
+                        );
+                    }
 
-                        } else {
-                            // El Switch está apagado
-                            textViewStatus.setText("Estado: Apagado");
-                        }
+                    // Se ejecuta cuando el usuario empieza a mover la barra
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+
+                        // Aquí podemos añadir código si lo necesitamos
+                    }
+
+                    // Se ejecuta cuando el usuario termina de mover la barra
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+
+                        // Aquí podemos añadir código si lo necesitamos
                     }
                 }
         );
     }
 }
+

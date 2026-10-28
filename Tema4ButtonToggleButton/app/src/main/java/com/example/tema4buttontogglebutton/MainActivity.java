@@ -1,7 +1,10 @@
+
 package com.example.tema4buttontogglebutton;
 
 import android.os.Bundle;
-import android.widget.RatingBar;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,32 +15,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.linear);
 
-        // Buscamos los elementos del XML
-        RatingBar ratingBar = findViewById(R.id.ratingBar);
-        TextView textViewRating = findViewById(R.id.textViewRating);
+        ProgressBar pb = findViewById(R.id.pbDet);
+        TextView tvProgreso = findViewById(R.id.tvProgreso);
 
-        // Listener para cambios en la calificación del RatingBar
-        ratingBar.setOnRatingBarChangeListener(
-                new RatingBar.OnRatingBarChangeListener() {
+        Handler handler = new Handler(Looper.getMainLooper());
 
-                    @Override
-                    public void onRatingChanged(
-                            RatingBar ratingBar,
-                            float rating,
-                            boolean fromUser) {
+        new Runnable() {
+            int v = 0;
 
-                        // Actualizar el TextView con la calificación seleccionada
-                        textViewRating.setText(
-                                "Calificación: " + rating
-                        );
+            @Override
+            public void run() {
+                if (v <= 100) {
+                    pb.setProgress(v);
+                    tvProgreso.setText("Progreso: " + v + "%");
+
+                    v += 5;
+
+                    if (v <= 100) {
+                        handler.postDelayed(this, 200);
                     }
                 }
-        );
+            }
+        }.run();
     }
 }
-
-

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:useDefaultMargins="true"
+    android:padding="8dp">
+
+    <!-- Pantalla de la calculadora -->
+    <TextView
+        android:id="@+id/textoCalcu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_columnSpan="4"
+        android:gravity="center_vertical|end"
+        android:padding="12dp"
+        android:background="#BDBDBD"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="36sp" />
+
+    <!-- Botones de borrado y operaciones -->
+    <Button
+        android:id="@+id/btnAC"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="AC"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="C"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="÷"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnMultiplicacion"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="×"
+        android:textSize="25sp" />
+
+    <!-- Primera fila de números -->
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="7"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="8"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="9"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnResta"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="−"
+        android:textSize="25sp" />
+
+    <!-- Segunda fila de números -->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="4"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="5"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="6"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="+"
+        android:textSize="25sp" />
+
+    <!-- Tercera fila de números -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="1"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="2"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="3"
+        android:textSize="25sp" />
+
+    <!-- Botón igual sin cálculo -->
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text="="
+        android:textSize="25sp" />
+
+    <!-- Última fila -->
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="2"
+        android:text="0"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnComa"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_columnWeight="1"
+        android:text=","
+        android:textSize="25sp" />
+
+</GridLayout>

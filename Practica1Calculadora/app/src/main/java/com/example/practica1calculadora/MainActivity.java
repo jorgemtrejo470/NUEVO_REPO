@@ -1,3 +1,9 @@
+/*
+Calculadora con funciones Generadas por IA a partir de copiada y pegada
+de mi anterior prototipo de calculadora
+ */
+
+
 package com.example.practica1calculadora;
 
 import android.os.Bundle;

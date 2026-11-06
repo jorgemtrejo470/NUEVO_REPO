@@ -1,34 +1,23 @@
 <resources>
-
     <string name="app_name">Gestión Bar</string>
-
-    <string name="titulo">Cuenta del restaurante</string>
-    <string name="importe">Total de la cuenta (€)</string>
+    <string name="titulo">Cuenta del bar</string>
+    <string name="importe">Importe (€)</string>
     <string name="hint_importe">Introduce el importe</string>
-
     <string name="incluir_propina">Incluir propina</string>
-    <string name="porcentaje_inicial">Propina: 10%</string>
+    <string name="porcentaje_inicial" formatted="false">Propina: 10%</string>
     <string name="porcentaje">Propina: %1$d%%</string>
-
     <string name="metodo_pago">Método de pago</string>
     <string name="efectivo">Efectivo</string>
     <string name="tarjeta">Tarjeta</string>
-
-    <string name="valoracion">Calificación del servicio</string>
-
-    <string name="camarero">Nombre del camarero</string>
-    <string name="hint_camarero">Escribe el nombre del camarero</string>
-
-    <string name="calcular">Calcular total</string>
-    <string name="resultado">El resultado aparecerá aquí.</string>
-
-    <string name="error_vacio">Error: falta introducir el importe de la cuenta.</string>
-    <string name="error_numero">Error: introduce un número válido.</string>
-    <string name="error_positivo">Error: la cuenta debe ser mayor que cero.</string>
-    <string name="error_pago">Error: selecciona un método de pago.</string>
-
+    <string name="valoracion">Valoración</string>
+    <string name="camarero">Camarero</string>
+    <string name="hint_camarero">Nombre del camarero</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+    <string name="error_vacio">Introduce el importe.</string>
+    <string name="error_numero">Introduce un número válido.</string>
+    <string name="error_positivo">El importe debe ser mayor que cero.</string>
+    <string name="error_pago">Selecciona el método de pago.</string>
     <string name="no_indicado">No indicado</string>
-
-    <string name="resultado_calculado">Cuenta: %1$s\nPropina: %2$s\nTotal: %3$s\nMétodo de pago: %4$s\nValoración: %5$.1f / 5\nCamarero: %6$s</string>
-
+    <string name="resultado_calculado">Cuenta: %1$s\nPropina: %2$s\nTotal: %3$s\nPago: %4$s\nValoración: %5$.1f / 5\nCamarero: %6$s</string>
 </resources>

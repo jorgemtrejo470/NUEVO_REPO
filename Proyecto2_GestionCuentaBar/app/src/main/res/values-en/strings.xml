@@ -1,35 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Bar Management</string>
-
-    <string name="titulo">Restaurant Bill</string>
-    <string name="importe">Bill total (€)</string>
+    <string name="titulo">Bar Bill</string>
+    <string name="importe">Amount (€)</string>
     <string name="hint_importe">Enter the amount</string>
-
     <string name="incluir_propina">Include tip</string>
     <string name="porcentaje_inicial" formatted="false">Tip: 10%</string>
     <string name="porcentaje">Tip: %1$d%%</string>
-
     <string name="metodo_pago">Payment method</string>
     <string name="efectivo">Cash</string>
     <string name="tarjeta">Card</string>
-
-    <string name="valoracion">Service rating</string>
-
-    <string name="camarero">Waiter&apos;s name</string>
-    <string name="hint_camarero">Enter the waiter&apos;s name</string>
-
-    <string name="calcular">Calculate total</string>
-    <string name="resultado">The result will appear here.</string>
-
-    <string name="error_vacio">Error: please enter the bill amount.</string>
-    <string name="error_numero">Error: enter a valid number.</string>
-    <string name="error_positivo">Error: the bill must be greater than zero.</string>
-    <string name="error_pago">Error: select a payment method.</string>
-
+    <string name="valoracion">Rating</string>
+    <string name="camarero">Waiter</string>
+    <string name="hint_camarero">Waiter name</string>
+    <string name="calcular">Calculate</string>
+    <string name="resultado">Result</string>
+    <string name="error_vacio">Enter the amount.</string>
+    <string name="error_numero">Enter a valid number.</string>
+    <string name="error_positivo">Amount must be greater than zero.</string>
+    <string name="error_pago">Select a payment method.</string>
     <string name="no_indicado">Not specified</string>
-
-    <string name="resultado_calculado">Bill: %1$s\nTip: %2$s\nTotal: %3$s\nPayment method: %4$s\nRating: %5$.1f / 5\nWaiter: %6$s</string>
-
+    <string name="resultado_calculado">Bill: %1$s\nTip: %2$s\nTotal: %3$s\nPayment: %4$s\nRating: %5$.1f / 5\nWaiter: %6$s</string>
 </resources>

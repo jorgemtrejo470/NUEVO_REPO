@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Importe de la cuenta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/importe"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_importe"
+            android:inputType="text"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Propina -->
+        <CheckBox
+            android:id="@+id/cbPropina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/incluir_propina" />
+
+        <TextView
+            android:id="@+id/tvPorcentaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/porcentaje_inicial"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/seekPropina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            android:progress="10"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Método de pago -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/metodo_pago"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/rgPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbEfectivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/efectivo"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tarjeta" />
+
+        </RadioGroup>
+
+        <!-- Valoración del servicio -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valoracion"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp" />
+
+        <RatingBar
+            android:id="@+id/ratingServicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="2.5" />
+
+        <!-- Nombre del camarero -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/camarero"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/actvCamarero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_camarero"
+            android:inputType="textCapWords"
+            android:completionThreshold="3" />
+
+        <!-- Botón para calcular -->
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calcular"
+            android:layout_marginTop="20dp" />
+
+        <!-- Resultado -->
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado"
+            android:textSize="17sp"
+            android:padding="12dp"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+</ScrollView>

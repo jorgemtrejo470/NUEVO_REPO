@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.listview);
+        setContentView(R.layout.linearlayout);
 
         //Datos de ejemplo para la lista
         List<String> data = Arrays.asList("Alemania", "España", "Francia", "Polonia", "Portugal", "Italia",

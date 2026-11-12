@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Med calcular cuenta
     private void calcularCuenta() {
 
         String textoCuenta = etCuenta.getText().toString().trim();

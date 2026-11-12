@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Bar Management</string>
     <string name="titulo">Bar Bill</string>
     <string name="importe">Amount (€)</string>
@@ -20,4 +21,5 @@
     <string name="error_pago">Select a payment method.</string>
     <string name="no_indicado">Not specified</string>
     <string name="resultado_calculado">Bill: %1$s\nTip: %2$s\nTotal: %3$s\nPayment: %4$s\nRating: %5$.1f / 5\nWaiter: %6$s</string>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.example.tema5_costumeradapter;
 
 import android.os.Bundle;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,5 +17,14 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Datos [] datos = new Datos[]{
+                new Datos("Linea principall 1","Linea inferior 1"),
+                new Datos("Linea principall 2","Linea inferior 2"),
+                new Datos("Linea principall 3","Linea inferior 3"),
+                new Datos("Linea principall 4","Linea inferior 4")};
+
+        ListView listado = findViewById(R.id.listView);
+        Adaptador miAdaptador = new Adaptador(this, datos);
+        listado.setAdapter(miAdaptador);
     }
 }

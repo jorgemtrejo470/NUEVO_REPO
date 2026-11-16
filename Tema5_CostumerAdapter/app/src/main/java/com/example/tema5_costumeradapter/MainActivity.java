@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Datos [] datos = new Datos[]{
-                new Datos("Linea principall 1","Linea inferior 1"),
-                new Datos("Linea principall 2","Linea inferior 2"),
-                new Datos("Linea principall 3","Linea inferior 3"),
-                new Datos("Linea principall 4","Linea inferior 4")};
+                new Datos("Linea principal 1","Linea inferior 1"),
+                new Datos("Linea principal 2","Linea inferior 2"),
+                new Datos("Linea principal 3","Linea inferior 3"),
+                new Datos("Linea principal 4","Linea inferior 4")};
 
         ListView listado = findViewById(R.id.listView);
         Adaptador miAdaptador = new Adaptador(this, datos);

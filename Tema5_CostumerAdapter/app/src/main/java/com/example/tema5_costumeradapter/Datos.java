@@ -6,8 +6,8 @@ public class Datos {
     private  String texto2;
 
     public Datos(String text1, String text2){
-        texto1 = text1;
-        texto2 = text2;
+        this.texto1 = text1;
+        this.texto2 = text2;
 
     }
 
@@ -15,7 +15,7 @@ public class Datos {
         return texto1;
     }
 
-    public String getTesto2(){
+    public String getTexto2(){
         return texto2;
     }
 

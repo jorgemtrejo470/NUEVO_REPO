@@ -1,7 +1,10 @@
 package com.example.tema5_costumeradapter;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,9 +25,20 @@ public class MainActivity extends AppCompatActivity {
                 new Datos("Linea principal 2","Linea inferior 2"),
                 new Datos("Linea principal 3","Linea inferior 3"),
                 new Datos("Linea principal 4","Linea inferior 4")};
-
+        View miCabecera = getLayoutInflater().inflate(R.layout.cabecera, null);
         ListView listado = findViewById(R.id.listView);
+        listado.addHeaderView(miCabecera);
         Adaptador miAdaptador = new Adaptador(this, datos);
         listado.setAdapter(miAdaptador);
+        listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Obtener el eleemto seleccionado
+                //Mostrar un mensaje con el elemento selecionado
+                String selectedItem = ((Datos) parent.getItemAtPosition(position)).getTexto1();
+                Toast.makeText(MainActivity.this, "Elemento pulsado: "+ selectedItem, Toast.LENGTH_SHORT).show();
+                //Aquí puedes agrgar cualquier otra acción para el elemento pulsado
+            }
+        });
     }
 }
